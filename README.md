@@ -32,7 +32,7 @@ This Hackathon project is an AWS app consisting of:
    ```
 
 # TODO:
-- This sample does not yet run on AWS
+- This sample does not yet run on AWS - Nice to have, but can be checked later
   - Firehose -> ElasticSearch
     - Records are not properly delivered to ElasticSearch yet
   - Search Lambda -> ElasticSearch
@@ -40,6 +40,9 @@ This Hackathon project is an AWS app consisting of:
 - Simplify the S3 website URL in LocalStack
   - We need to use http://movie-search.s3.amazonaws.com:4566/index.html instead of the generated output: http://movie-search.s3-website-eu-west-1.amazonaws.com/
   - It works with http://movie-search.s3-website.localhost.localstack.cloud/
+  According to Ben, using s3-website.localhost.localstack.cloud is the way to go, to safely distinguish between buckets and websites.
+  -> links should be adapted in README or in the generated output
 - HTTPS?
   - Due to the function URLs having no proper certificate, we can only use the http version!
   - http://movie-search.s3-website.localhost.localstack.cloud:4566/
+  According to Ben, this is not supported by AWS, and therefore not an issue.
